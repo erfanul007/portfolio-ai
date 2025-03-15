@@ -9,9 +9,12 @@ import ProjectsPage from './pages/ProjectsPage';
 import SkillsPage from './pages/SkillsPage';
 import ContactPage from './pages/ContactPage';
 
+// Get the base URL from Vite
+const baseUrl = import.meta.env.BASE_URL;
+
 function App() {
   return (
-    <Router>
+    <Router basename={baseUrl}>
       <ThemeProvider>
         <NavigationProvider>
           <Layout>
