@@ -41,7 +41,7 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
           Get In Touch
@@ -63,8 +63,8 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h4>
-                  <a href="mailto:john.doe@example.com" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    john.doe@example.com
+                  <a href="mailto:eib.erfan@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    eib.erfan@gmail.com
                   </a>
                 </div>
               </div>
@@ -77,8 +77,8 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Phone</h4>
-                  <a href="tel:+1234567890" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    +1 (234) 567-890
+                  <a href="tel:+8801521234156" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    +880 1521 234156
                   </a>
                 </div>
               </div>
@@ -93,7 +93,7 @@ const Contact = () => {
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Location</h4>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Boston, Massachusetts, USA
+                    Dhaka, Bangladesh
                   </p>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const Contact = () => {
               </h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://linkedin.com/" 
+                  href="https://linkedin.com/in/erfanul007" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -116,7 +116,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://github.com/" 
+                  href="https://github.com/erfanul007" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -127,7 +127,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://twitter.com/" 
+                  href="https://x.com/erfanul007" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"

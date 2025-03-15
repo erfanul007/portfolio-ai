@@ -2,21 +2,34 @@
 const educations = [
   {
     id: 1,
-    degree: 'Master of Science in Computer Science',
-    institution: 'University of Technology',
-    location: 'Boston, MA',
-    period: '2018 - 2020',
-    description: 'Specialized in Software Engineering with focus on distributed systems and cloud computing. Graduated with honors.',
-    courses: ['Advanced Algorithms', 'Distributed Systems', 'Cloud Computing', 'Software Architecture']
+    degree: 'BSc in Computer Science & Engineering',
+    institution: 'Daffodil International University',
+    location: 'Dhaka, Bangladesh',
+    period: 'January 2018 - January 2022',
+    description: 'Graduated with a good GPA of 3.73/4.00 while being active in the university\'s tech community. Balanced studies with involvement in programming competitions and the programming club.',
+    courses: ['Data Structure', 'Algorithm', 'OOP', 'Database', 'Web Development', 'Operating System', 'Artificial Intelligence']
+  }
+];
+
+// Certificates
+const certificates = [
+  {
+    id: 1,
+    title: 'IELTS Academic',
+    issuer: 'British Council',
+    description: 'Overall Band Score 7 (CEFR Level C1)'
   },
   {
     id: 2,
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'State University',
-    location: 'Chicago, IL',
-    period: '2014 - 2018',
-    description: 'Completed undergraduate studies with a minor in Mathematics. Participated in various programming competitions.',
-    courses: ['Data Structures', 'Algorithms', 'Database Systems', 'Web Development', 'Operating Systems']
+    title: 'Software Engineer Certification',
+    issuer: 'HackerRank',
+    description: 'Problem Solving, SQL, REST APIs'
+  },
+  {
+    id: 3,
+    title: 'Microsoft Azure Fundamentals',
+    issuer: 'Microsoft',
+    description: 'Describe cloud concepts learning path'
   }
 ];
 
@@ -24,23 +37,30 @@ const educations = [
 const volunteering = [
   {
     id: 1,
-    role: 'Technical Mentor',
-    organization: 'Code for Good',
-    period: '2021 - Present',
-    description: 'Mentoring underprivileged students in programming and web development. Organizing monthly coding workshops.'
+    role: 'Vice President (ACM)',
+    organization: 'Computer and Programming Club',
+    period: 'January 2020 - December 2020',
+    description: 'Led a team of members to organize university-wide programming contests and workshops. Established training programs that helped students perform better in regional competitions.'
   },
   {
     id: 2,
-    role: 'Open Source Contributor',
-    organization: '.NET Foundation',
-    period: '2020 - Present',
-    description: 'Contributing to open source .NET projects. Helping with documentation and bug fixes.'
+    role: 'Programming Trainer',
+    organization: 'DIU ACM',
+    period: 'May 2019 - December 2021',
+    description: 'Designed and delivered algorithm training sessions for sophomore students. Created problem-solving materials that are now used as resources for other students.'
+  },
+  {
+    id: 3,
+    role: 'Problem Setter',
+    organization: 'Various Programming Contests',
+    period: '2019 - 2021',
+    description: 'Created original algorithmic problems for university and regional competitions. Developed problems with real-world scenarios and test cases that covered both basic concepts and advanced techniques.'
   }
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="education" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
           Education & Volunteering
@@ -86,6 +106,26 @@ const Education = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* Certificates Section */}
+              <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  Certificates
+                </h4>
+                
+                <div className="space-y-4">
+                  {certificates.map((cert) => (
+                    <div key={cert.id} className="border-l-2 border-blue-600 pl-4">
+                      <h5 className="font-semibold text-gray-900 dark:text-white">
+                        {cert.title}
+                      </h5>
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <span className="text-blue-600 dark:text-blue-400">{cert.issuer}</span> - {cert.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
           

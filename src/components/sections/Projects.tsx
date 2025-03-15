@@ -1,37 +1,40 @@
-// Sample projects data
+// Projects data
 const projects = [
   {
     id: 1,
-    title: 'Enterprise Resource Planning System',
-    description: 'A comprehensive ERP solution for small to medium businesses. Includes modules for inventory management, accounting, HR, and customer relationship management.',
-    technologies: ['.NET Core', 'C#', 'ASP.NET MVC', 'SQL Server', 'Entity Framework', 'React', 'Azure'],
-    image: 'project-erp.jpg', // Replace with actual image
+    title: 'CPorBit',
+    subtitle: 'Personalized competitive programming mentor',
+    description: 'A web-based personalized competitive programming mentor that analyses Codeforces submissions and suggests problems to help users improve their contest ratings using KNN algorithm.',
+    technologies: ['DRF', 'Python', 'PostgreSQL', 'React', 'TailwindCSS', 'KNN Algorithm'],
+    image: '/cporbit_logo.png',
     link: '#',
-    github: 'https://github.com/johndoe/erp-system'
+    github: 'https://github.com/smhimran/CPorBit'
   },
   {
     id: 2,
-    title: 'E-commerce Platform',
-    description: 'A scalable e-commerce platform with features like product catalog, shopping cart, payment processing, and order management. Implemented using microservices architecture.',
-    technologies: ['.NET Core', 'C#', 'ASP.NET Web API', 'SQL Server', 'RabbitMQ', 'Docker', 'Kubernetes'],
-    image: 'project-ecommerce.jpg', // Replace with actual image
+    title: 'Green Division',
+    subtitle: 'A pathway for beginner problem solvers',
+    description: 'This web platform enables growth tracking for beginner problem solvers by utilizing selective problems from Beecrowd to enhance their basic programming concepts.',
+    technologies: ['Django', 'Python', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
+    image: '/greendivision_logo.jpg',
     link: '#',
-    github: 'https://github.com/johndoe/ecommerce-platform'
+    github: 'https://github.com/smhimran/GreenDivision'
   },
   {
     id: 3,
-    title: 'Task Management Application',
-    description: 'A collaborative task management tool for teams. Features include task assignment, progress tracking, notifications, and reporting.',
-    technologies: ['.NET Core', 'C#', 'Blazor', 'Entity Framework', 'SignalR', 'SQL Server'],
-    image: 'project-taskmanager.jpg', // Replace with actual image
+    title: 'ExpenseXpert',
+    subtitle: 'Group expense management app',
+    description: 'An Android application designed to manage group expenses, especially for events such as group tours, simplifying individual expense calculations.',
+    technologies: ['Android', 'Java', 'SQLite', 'Material Design'],
+    image: '/expensexpert_logo.jpg',
     link: '#',
-    github: 'https://github.com/johndoe/task-manager'
+    github: 'https://github.com/erfanul007/ExpenseXpert'
   }
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
           Projects
@@ -41,40 +44,82 @@ const Projects = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105"
+              className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105 group"
             >
               {/* Project Image */}
-              <div className="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
-                {/* Replace with actual image */}
-                <svg className="w-16 h-16 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+              <div className="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} logo`} 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null; // Prevent infinite loop
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const fallback = document.createElement('div');
+                      fallback.className = 'flex items-center justify-center w-full h-full';
+                      fallback.innerHTML = `
+                        <svg class="w-16 h-16 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      `;
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                />
               </div>
               
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {project.description}
+                <p className="text-sm text-blue-600 dark:text-blue-400 mb-2">
+                  {project.subtitle}
                 </p>
                 
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech, index) => (
-                    <span 
-                      key={index} 
-                      className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs rounded-full">
-                      +{project.technologies.length - 3} more
-                    </span>
+                {/* Description with truncation and hover effect */}
+                <div className="relative mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                    {project.description}
+                  </p>
+                  {project.description.length > 100 && (
+                    <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-gray-50 dark:from-gray-800 to-transparent group-hover:opacity-0 transition-opacity duration-300"></div>
                   )}
+                </div>
+                
+                {/* Technologies with improved display */}
+                <div className="relative mb-4">
+                  <div className="flex flex-wrap gap-2 overflow-hidden transition-all duration-300" style={{ maxHeight: '28px' }}>
+                    {project.technologies.slice(0, 3).map((tech, index) => (
+                      <span 
+                        key={index} 
+                        className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs rounded-full group-hover:hidden">
+                        +{project.technologies.length - 3} more
+                      </span>
+                    )}
+                  </div>
+                  
+                  {/* Additional technologies that show on project hover */}
+                  <div className="flex flex-wrap gap-2 mt-2 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden">
+                    {project.technologies.slice(3).map((tech, index) => (
+                      <span 
+                        key={index} 
+                        className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 
                 {/* Links */}
