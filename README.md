@@ -26,7 +26,6 @@ A modern, responsive portfolio website showcasing my skills, projects, education
 - **Animation**: Custom CSS animations
 - **State Management**: React Context API
 - **Navigation**: Custom navigation system with smooth scrolling
-- **Deployment**: [Add your deployment platform]
 
 ## 🏗️ Project Structure
 
@@ -91,56 +90,14 @@ The AI was able to understand requirements, suggest implementations, and make ad
 
 ## 📝 License
 
-[MIT License](LICENSE)
+This project is licensed under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-- **Email**: [your-email@example.com]
-- **LinkedIn**: [Your LinkedIn Profile]
+- **Email**: erfanul.islam@gmail.com
+- **LinkedIn**: [linkedin.com/in/erfanul007](https://linkedin.com/in/erfanul007)
 - **GitHub**: [github.com/erfanul007](https://github.com/erfanul007)
 
-## 📦 Deployment
-
-This portfolio is configured for deployment on GitHub Pages. To deploy:
-
-### Option 1: Using npm scripts (Recommended)
-
-1. Simply run the deploy script:
-   ```bash
-   npm run deploy
-   ```
-
-   This will:
-   - Build the project (`npm run build`)
-   - Deploy the `dist` folder to the `gh-pages` branch
-   - Make your site available at `https://erfanul007.github.io/portfolio-ai/`
-
-### Option 2: Using GitHub Actions
-
-1. Push your code to GitHub:
-   ```bash
-   git add .
-   git commit -m "Ready for deployment"
-   git push origin main
-   ```
-
-2. GitHub Actions will automatically build and deploy your site to GitHub Pages when you push to the main branch.
-
-3. Your site will be available at `https://erfanul007.github.io/portfolio-ai/`
-
-### Option 3: Manual Deployment
-
-If you prefer to deploy manually:
-
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-
-2. Deploy the `dist` folder to GitHub Pages:
-   ```bash
-   npm install -g gh-pages
-   gh-pages -d dist
-   ```
+---
 
 © 2024 Md Erfanul Islam Bhuiyan. All Rights Reserved.
