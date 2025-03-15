@@ -2,31 +2,43 @@
 const experiences = [
   {
     id: 1,
-    title: 'Senior .NET Developer',
-    company: 'Tech Solutions Inc.',
-    location: 'New York, NY',
-    period: 'Jan 2022 - Present',
+    title: 'Backend Developer (.NET)',
+    company: 'InfinitiBit',
+    location: 'Dhaka, Bangladesh',
+    period: 'November 2024 - Present',
     description: [
-      'Led the development of enterprise-level web applications using .NET Core and ASP.NET MVC',
-      'Implemented microservices architecture to improve scalability and maintainability',
-      'Mentored junior developers and conducted code reviews to ensure code quality',
-      'Collaborated with cross-functional teams to deliver features on time and within scope'
+      'Designing a backend solution in .NET 8 for LLM-based document generation using the agentic RAG approach',
+      'Implementing CQRS pattern with minimal API, EF core and Dapper for developing a scalable AI based application',
+      'Integrating cloud services such as Azure Active Directory, SharePoint, Snowflake, AWS S3 and Adobe e-Sign',
+      'Analyzing technical challenges for web-based smart applications utilizing AI and linear programming'
     ],
-    technologies: ['.NET Core', 'C#', 'ASP.NET MVC', 'SQL Server', 'Azure', 'Entity Framework']
+    technologies: ['.NET 8', 'C#', 'CQRS', 'Minimal API', 'EF Core', 'Dapper', 'Azure', 'AWS']
   },
   {
     id: 2,
-    title: '.NET Developer',
-    company: 'Digital Innovations',
-    location: 'Boston, MA',
-    period: 'Mar 2020 - Dec 2021',
+    title: 'Senior Software Engineer',
+    company: 'Enosis Solutions',
+    location: 'Dhaka, Bangladesh',
+    period: 'April 2024 - July 2024',
     description: [
-      'Developed and maintained web applications using .NET Framework and ASP.NET',
-      'Designed and implemented database schemas and stored procedures in SQL Server',
-      'Integrated third-party APIs and services to enhance application functionality',
-      'Participated in Agile development processes including daily stand-ups and sprint planning'
+      'Developed scalable solutions, transitioning a hiring platform from Node.js to .NET 8 following the modular monolithic architecture',
+      'Managed the development process of a substantial feature for a top project management software on Angular',
+      'Upheld coding standards and mitigated potential issues by conducting over 50 code reviews of peer works'
     ],
-    technologies: ['.NET Framework', 'C#', 'ASP.NET', 'SQL Server', 'JavaScript', 'jQuery']
+    technologies: ['.NET 8', 'C#', 'Angular', 'Modular Monolith', 'Node.js']
+  },
+  {
+    id: 3,
+    title: 'Software Engineer',
+    company: 'Enosis Solutions',
+    location: 'Dhaka, Bangladesh',
+    period: 'January 2022 - March 2024',
+    description: [
+      'Modernizing legacy systems, upgrading applications from vb.net to C# .NET 6, and integrating Azure cloud services',
+      'Built a microservice with Azure Functions for sending bulk emails, and developed SSO with Azure Active Directory',
+      'Identified security vulnerabilities and implemented a backend authorization layer in API endpoints to prevent data breaches'
+    ],
+    technologies: ['.NET 6', 'C#', 'Azure Functions', 'Azure Active Directory', 'Microservices', 'VB.NET']
   }
 ];
 

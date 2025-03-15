@@ -2,19 +2,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-gray-900 py-6 border-t border-gray-200 dark:border-gray-700">
+    <footer className="bg-white dark:bg-gray-900 py-6 border-t border-gray-200 dark:border-gray-700 md:fixed md:bottom-0 md:left-0 md:right-0 md:z-40">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-700 dark:text-gray-300 text-center md:text-left text-sm">
-              &copy; {currentYear} John Doe. All rights reserved.
+              &copy; {currentYear} Md Erfanul Islam Bhuiyan. All rights reserved.
             </p>
           </div>
           
           <div className="flex space-x-6">
             {/* Social Media Links */}
             <a 
-              href="https://github.com/" 
+              href="https://github.com/erfanul007" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -25,7 +25,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://linkedin.com/" 
+              href="https://linkedin.com/in/erfanul007" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -36,7 +36,7 @@ const Footer = () => {
               </svg>
             </a>
             <a 
-              href="https://twitter.com/" 
+              href="https://x.com/erfanul007" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
