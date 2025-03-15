@@ -40,7 +40,7 @@ const volunteering = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="education" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
           Education & Volunteering

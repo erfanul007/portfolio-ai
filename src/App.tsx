@@ -1,24 +1,32 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { NavigationProvider } from './context/NavigationContext';
 import Layout from './components/layout/Layout';
-import Hero from './components/sections/Hero';
-import Experience from './components/sections/Experience';
-import Education from './components/sections/Education';
-import Projects from './components/sections/Projects';
-import Skills from './components/sections/Skills';
-import Contact from './components/sections/Contact';
+import HomePage from './pages/HomePage';
+import ExperiencePage from './pages/ExperiencePage';
+import EducationPage from './pages/EducationPage';
+import ProjectsPage from './pages/ProjectsPage';
+import SkillsPage from './pages/SkillsPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <ThemeProvider>
-      <Layout>
-        <Hero />
-        <Experience />
-        <Education />
-        <Projects />
-        <Skills />
-        <Contact />
-      </Layout>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <NavigationProvider>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/education" element={<EducationPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/skills" element={<SkillsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </Layout>
+        </NavigationProvider>
+      </ThemeProvider>
+    </Router>
   );
 }
 
