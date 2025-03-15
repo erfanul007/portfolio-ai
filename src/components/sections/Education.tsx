@@ -2,11 +2,11 @@
 const educations = [
   {
     id: 1,
-    degree: 'Bachelor of Science in Computer Science and Engineering',
+    degree: 'BSc in Computer Science & Engineering',
     institution: 'Daffodil International University',
     location: 'Dhaka, Bangladesh',
     period: 'January 2018 - January 2022',
-    description: 'Completed bachelor with a GPA 3.73, participated in various extra curricular such as programming competitions, math olympiad, programming club and activities.',
+    description: 'Graduated with a good GPA of 3.73/4.00 while being active in the university\'s tech community. Balanced studies with involvement in programming competitions and the programming club.',
     courses: ['Data Structure', 'Algorithm', 'OOP', 'Database', 'Web Development', 'Operating System', 'Artificial Intelligence']
   }
 ];
@@ -40,21 +40,21 @@ const volunteering = [
     role: 'Vice President (ACM)',
     organization: 'Computer and Programming Club',
     period: 'January 2020 - December 2020',
-    description: 'Managed programming and problem solving community of my university. Organized contests, training classes, and programming camps. Coordinated programmer\'s meetups and seminars, fostering a collaborative learning environment.'
+    description: 'Led a team of members to organize university-wide programming contests and workshops. Established training programs that helped students perform better in regional competitions.'
   },
   {
     id: 2,
     role: 'Programming Trainer',
     organization: 'DIU ACM',
     period: 'May 2019 - December 2021',
-    description: 'Volunteered as a trainer for the DIU Advanced Programming and Problem-Solving Camp, organized by DIU ACM, where I helped sophomore students from Daffodil International University improve their problem-solving skills.'
+    description: 'Designed and delivered algorithm training sessions for sophomore students. Created problem-solving materials that are now used as resources for other students.'
   },
   {
     id: 3,
     role: 'Problem Setter',
     organization: 'Various Programming Contests',
     period: '2019 - 2021',
-    description: 'Authored 20+ programming problems for various contests, ensuring they were challenging yet solvable, with clear problem statements and test cases that covered edge cases.'
+    description: 'Created original algorithmic problems for university and regional competitions. Developed problems with real-world scenarios and test cases that covered both basic concepts and advanced techniques.'
   }
 ];
 

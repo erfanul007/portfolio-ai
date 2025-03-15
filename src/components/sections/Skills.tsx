@@ -49,7 +49,7 @@ const skillCategories = [
       { name: 'AWS', level: 80 },
       { name: 'Docker', level: 75 },
       { name: 'Git', level: 90 },
-      { name: 'CI/CD', level: 80 },
+      { name: 'Microsoft Graph API', level: 80 },
       { name: 'Linux', level: 75 }
     ]
   },
@@ -76,27 +76,23 @@ const skillCategories = [
 const competitiveProgramming = [
   {
     id: 1,
-    competition: 'Codeforces',
-    achievement: 'Expert (Max Rating: 1623)',
-    year: '2019-Present'
+    competition: 'DIU Intra University Programming Contest 2021',
+    achievement: 'Champion'
   },
   {
     id: 2,
-    competition: 'DIU Intra University Programming Contest 2021',
-    achievement: 'Champion',
-    year: '2021'
+    competition: 'Codeforces',
+    achievement: 'Expert (Max Rating: 1623)'
   },
   {
     id: 3,
-    competition: 'ICPC Dhaka Regional',
-    achievement: 'Participant (Team: DIU_Tr0jAnZ)',
-    year: '2020'
+    competition: 'ICPC Dhaka Regional 2020',
+    achievement: 'Participant (Team: DIU_Tr0jAnZ)'
   },
   {
     id: 4,
-    competition: 'Problem Solving',
-    achievement: '2500+ problems solved across platforms (900+ on Codeforces, 500+ on LeetCode)',
-    year: '2018-Present'
+    competition: 'DIU Take-off Programming Contest, Summer 2018',
+    achievement: '9th Place'
   }
 ];
 
@@ -192,7 +188,7 @@ const Skills = () => {
             
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                I am passionate about algorithmic problem solving and regularly participate in coding competitions. I've solved over 2500 problems across various platforms and participated in numerous individual and team contests.
+                I am passionate about algorithmic problem solving and regularly participate in coding competitions. I've solved over 900+ problems on Codeforces, 500+ on LeetCode, and 300+ on UVA. My experience spans numerous individual and team contests across different platforms.
               </p>
               
               {/* Achievement Cards */}
@@ -204,9 +200,6 @@ const Skills = () => {
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">
                       {item.achievement}
-                    </p>
-                    <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
-                      {item.year}
                     </p>
                   </div>
                 ))}

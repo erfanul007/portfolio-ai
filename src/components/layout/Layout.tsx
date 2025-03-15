@@ -2,7 +2,6 @@ import { ReactNode, useEffect, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import SectionNavigation from '../ui/SectionNavigation';
-import SectionProgress from '../ui/SectionProgress';
 import PageTransition from '../ui/PageTransition';
 import { useNavigation } from '../../context/NavigationContext';
 import useSwipe from '../../hooks/useSwipe';
@@ -60,7 +59,6 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </PageTransition>
       </main>
-      <SectionProgress />
       <SectionNavigation />
       <Footer />
     </div>
