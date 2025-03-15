@@ -1,6 +1,9 @@
 import { useNavigation } from '../../context/NavigationContext';
 import { useState, useEffect } from 'react';
 
+// Get the base URL from Vite
+const baseUrl = import.meta.env.BASE_URL;
+
 const Hero = () => {
   const { navigateToSection } = useNavigation();
   const [displayText, setDisplayText] = useState('');
@@ -83,7 +86,7 @@ const Hero = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl border-4 border-white dark:border-gray-800">
               {/* Erfan's profile image with fallback */}
               <img 
-                src="/profile-erfan.jpg" 
+                src={`${baseUrl}profile-erfan.jpg`} 
                 alt="Md Erfanul Islam Bhuiyan" 
                 className="w-full h-full object-cover"
                 onError={(e) => {

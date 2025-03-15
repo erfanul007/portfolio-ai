@@ -2,16 +2,6 @@ import { useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { useNavigation } from '../../context/NavigationContext';
 
-// Navigation links for the portfolio
-const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Education', href: '#education' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Contact', href: '#contact' },
-];
-
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const { navigateToSection, currentSection, sections } = useNavigation();

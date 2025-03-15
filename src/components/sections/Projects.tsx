@@ -6,7 +6,7 @@ const projects = [
     subtitle: 'Personalized competitive programming mentor',
     description: 'A web-based personalized competitive programming mentor that analyses Codeforces submissions and suggests problems to help users improve their contest ratings using KNN algorithm.',
     technologies: ['DRF', 'Python', 'PostgreSQL', 'React', 'TailwindCSS', 'KNN Algorithm'],
-    image: '/cporbit_logo.png',
+    image: 'cporbit_logo.png',
     link: '#',
     github: 'https://github.com/smhimran/CPorBit'
   },
@@ -16,7 +16,7 @@ const projects = [
     subtitle: 'A pathway for beginner problem solvers',
     description: 'This web platform enables growth tracking for beginner problem solvers by utilizing selective problems from Beecrowd to enhance their basic programming concepts.',
     technologies: ['Django', 'Python', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
-    image: '/greendivision_logo.jpg',
+    image: 'greendivision_logo.jpg',
     link: '#',
     github: 'https://github.com/smhimran/GreenDivision'
   },
@@ -26,11 +26,14 @@ const projects = [
     subtitle: 'Group expense management app',
     description: 'An Android application designed to manage group expenses, especially for events such as group tours, simplifying individual expense calculations.',
     technologies: ['Android', 'Java', 'SQLite', 'Material Design'],
-    image: '/expensexpert_logo.jpg',
+    image: 'expensexpert_logo.jpg',
     link: '#',
     github: 'https://github.com/erfanul007/ExpenseXpert'
   }
 ];
+
+// Get the base URL from Vite
+const baseUrl = import.meta.env.BASE_URL;
 
 const Projects = () => {
   return (
@@ -49,7 +52,7 @@ const Projects = () => {
               {/* Project Image */}
               <div className="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
                 <img 
-                  src={project.image} 
+                  src={`${baseUrl}${project.image}`} 
                   alt={`${project.title} logo`} 
                   className="w-full h-full object-cover"
                   onError={(e) => {
