@@ -2,8 +2,6 @@
 
 A modern, responsive portfolio website showcasing my skills, projects, education, and achievements as a software engineer and competitive programmer.
 
-![Portfolio Screenshot](public/screenshot.png)
-
 ## 🚀 Live Demo
 
 [View Live Demo](https://erfanul007.github.io/portfolio-ai/)
@@ -90,7 +88,7 @@ The AI was able to understand requirements, suggest implementations, and make ad
 
 ## 📝 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
@@ -100,4 +98,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-© 2024 Md Erfanul Islam Bhuiyan. All Rights Reserved.
+© 2025 Md Erfanul Islam Bhuiyan. This project is available under the [MIT License](LICENSE).
