@@ -1,33 +1,48 @@
-// Projects data
+// Projects data - ordered by technology, quality, and impact
 const projects = [
   {
     id: 1,
-    title: 'CPorBit',
-    subtitle: 'Personalized competitive programming mentor',
-    description: 'A web-based personalized competitive programming mentor that analyses Codeforces submissions and suggests problems to help users improve their contest ratings using KNN algorithm.',
-    technologies: ['DRF', 'Python', 'PostgreSQL', 'React', 'TailwindCSS', 'KNN Algorithm'],
-    image: 'cporbit_logo.png',
-    link: '#',
-    github: 'https://github.com/smhimran/CPorBit'
+    title: 'Rust AI Agent Hub',
+    subtitle: 'High-performance CLI chatbot with AI agents',
+    description: 'Crafted a configurable AI agent system, reducing new agent setup time by 90% through TOML configuration. Engineered a high-performance Rust CLI with async streaming, achieving 50% faster response time.',
+    technologies: ['Rust', 'Tokio', 'OpenAI API', 'Clap', 'Serde'],
+    image: 'rust_ai_agent_hub.png',
+    github: 'https://github.com/erfanul007/rust-ai-agent-hub'
   },
   {
     id: 2,
-    title: 'Green Division',
-    subtitle: 'A pathway for beginner problem solvers',
-    description: 'This web platform enables growth tracking for beginner problem solvers by utilizing selective problems from Beecrowd to enhance their basic programming concepts.',
-    technologies: ['Django', 'Python', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
-    image: 'greendivision_logo.jpg',
-    link: '#',
-    github: 'https://github.com/smhimran/GreenDivision'
+    title: 'CPorBit',
+    subtitle: 'Personalized competitive programming mentor',
+    description: 'A web-based personalized competitive programming mentor that analyses Codeforces submissions and suggests problems to help users improve their contest ratings using KNN algorithm.',
+    technologies: ['Django REST', 'Python', 'PostgreSQL', 'React', 'TailwindCSS'],
+    image: 'cporbit_logo.png',
+    github: 'https://github.com/smhimran/CPorBit'
   },
   {
     id: 3,
+    title: 'Go Clean Template',
+    subtitle: 'Scalable web backend template with vanilla Go',
+    description: 'Architected a scalable Go web backend template following Clean Architecture, reducing project setup time by 70%. Integrated Docker, Redis, and PostgreSQL for a containerized dev environment with health checks.',
+    technologies: ['Go', 'Docker', 'Redis', 'PostgreSQL', 'Clean Architecture'],
+    image: 'go_clean_template.png',
+    github: 'https://github.com/erfanul007/go-clean-template'
+  },
+  {
+    id: 4,
+    title: 'Green Division',
+    subtitle: 'A pathway for beginner problem solvers',
+    description: 'Web platform enabling growth tracking for beginner problem solvers by utilizing selective problems from Beecrowd to enhance basic programming concepts.',
+    technologies: ['Django', 'Python', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
+    image: 'greendivision_logo.jpg',
+    github: 'https://github.com/smhimran/GreenDivision'
+  },
+  {
+    id: 5,
     title: 'ExpenseXpert',
     subtitle: 'Group expense management app',
     description: 'An Android application designed to manage group expenses, especially for events such as group tours, simplifying individual expense calculations.',
     technologies: ['Android', 'Java', 'SQLite', 'Material Design'],
     image: 'expensexpert_logo.jpg',
-    link: '#',
     github: 'https://github.com/erfanul007/ExpenseXpert'
   }
 ];
@@ -40,11 +55,11 @@ const Projects = () => {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105 group"
+              className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105 group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm"
             >
               {/* Project Image */}
               <div className="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
@@ -124,18 +139,6 @@ const Projects = () => {
 
                 {/* Links */}
                 <div className="flex space-x-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline flex items-center"
-                  >
-                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                    </svg>
-                    Demo
-                  </a>
                   <a
                     href={project.github}
                     target="_blank"

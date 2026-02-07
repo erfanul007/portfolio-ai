@@ -4,6 +4,7 @@ const educations = [
     id: 1,
     degree: 'BSc in Computer Science & Engineering',
     institution: 'Daffodil International University',
+    institutionUrl: 'https://daffodilvarsity.edu.bd/',
     location: 'Dhaka, Bangladesh',
     period: 'January 2018 - January 2022',
     description: 'Graduated with a good GPA of 3.73/4.00 while being active in the university\'s tech community. Balanced studies with involvement in programming competitions and the programming club.',
@@ -37,24 +38,27 @@ const certificates = [
 const volunteering = [
   {
     id: 1,
-    role: 'Vice President (ACM)',
-    organization: 'Computer and Programming Club',
+    role: 'Vice President (ACM Wing)',
+    organization: 'DIU Computer and Programming Club',
+    organizationUrl: 'https://cpc.daffodilvarsity.edu.bd/',
     period: 'January 2020 - December 2020',
-    description: 'Led a team of members to organize university-wide programming contests and workshops. Established training programs that helped students perform better in regional competitions.'
+    description: 'Led the ACM wing, overseeing the competitive programming community, organizing programming contests, and managing training classes and programming camps.'
   },
   {
     id: 2,
     role: 'Programming Trainer',
     organization: 'DIU ACM',
+    organizationUrl: 'https://diuacm.com/',
     period: 'May 2019 - December 2021',
-    description: 'Designed and delivered algorithm training sessions for sophomore students. Created problem-solving materials that are now used as resources for other students.'
+    description: 'Designed and delivered algorithm training sessions for students. Created problem-solving materials now used as learning resources.'
   },
   {
     id: 3,
     role: 'Problem Setter',
     organization: 'Various Programming Contests',
+    organizationUrl: null,
     period: '2019 - 2021',
-    description: 'Created original algorithmic problems for university and regional competitions. Developed problems with real-world scenarios and test cases that covered both basic concepts and advanced techniques.'
+    description: 'Created original algorithmic problems for university and regional competitions with real-world scenarios and comprehensive test cases.'
   }
 ];
 
@@ -77,7 +81,7 @@ const Education = () => {
                     {edu.degree}
                   </h4>
                   <div className="text-gray-700 dark:text-gray-300 mb-1">
-                    <span className="font-medium">{edu.institution}</span>, {edu.location}
+                    <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{edu.institution}</a>, {edu.location}
                   </div>
                   <p className="text-sm text-blue-600 dark:text-blue-400 mb-3">
                     {edu.period}
@@ -139,7 +143,11 @@ const Education = () => {
                     {vol.role}
                   </h4>
                   <div className="text-gray-700 dark:text-gray-300 mb-1">
-                    <span className="font-medium">{vol.organization}</span>
+                    {vol.organizationUrl ? (
+                      <a href={vol.organizationUrl} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{vol.organization}</a>
+                    ) : (
+                      <span className="font-medium">{vol.organization}</span>
+                    )}
                   </div>
                   <p className="text-sm text-blue-600 dark:text-blue-400 mb-3">
                     {vol.period}

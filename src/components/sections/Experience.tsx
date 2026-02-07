@@ -4,6 +4,7 @@ const experiences = [
     id: 1,
     title: 'Senior Backend Developer',
     company: 'InfinitiBit',
+    companyUrl: 'https://www.infinitibit.com/',
     location: 'Dhaka, Bangladesh',
     period: 'November 2025 - Present',
     description: [
@@ -17,6 +18,7 @@ const experiences = [
     id: 2,
     title: 'Backend Developer (.NET)',
     company: 'InfinitiBit',
+    companyUrl: 'https://www.infinitibit.com/',
     location: 'Dhaka, Bangladesh',
     period: 'November 2024 - November 2025',
     description: [
@@ -31,6 +33,7 @@ const experiences = [
     id: 3,
     title: 'Senior Software Engineer',
     company: 'Enosis Solutions',
+    companyUrl: 'https://www.enosisbd.com/',
     location: 'Dhaka, Bangladesh',
     period: 'April 2024 - July 2024',
     description: [
@@ -43,6 +46,7 @@ const experiences = [
     id: 4,
     title: 'Software Engineer',
     company: 'Enosis Solutions',
+    companyUrl: 'https://www.enosisbd.com/',
     location: 'Dhaka, Bangladesh',
     period: 'January 2022 - March 2024',
     description: [
@@ -74,7 +78,7 @@ const Experience = () => {
                   {exp.title}
                 </h3>
                 <div className="flex flex-wrap items-center text-gray-700 dark:text-gray-300">
-                  <span className="font-medium">{exp.company}</span>
+                  <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{exp.company}</a>
                   <span className="mx-2">•</span>
                   <span>{exp.location}</span>
                 </div>
