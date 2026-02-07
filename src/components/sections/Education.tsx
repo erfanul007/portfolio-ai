@@ -62,17 +62,14 @@ const Education = () => {
   return (
     <section id="education" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
-          Education & Volunteering
-        </h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Education Section */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
               Education
             </h3>
-            
+
             <div className="space-y-8">
               {educations.map((edu) => (
                 <div key={edu.id} className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
@@ -88,15 +85,15 @@ const Education = () => {
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {edu.description}
                   </p>
-                  
+
                   <div>
                     <h5 className="font-semibold text-gray-900 dark:text-white mb-2">
                       Key Courses:
                     </h5>
                     <div className="flex flex-wrap gap-2">
                       {edu.courses.map((course, index) => (
-                        <span 
-                          key={index} 
+                        <span
+                          key={index}
                           className="px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-300 text-sm rounded-full"
                         >
                           {course}
@@ -106,13 +103,13 @@ const Education = () => {
                   </div>
                 </div>
               ))}
-              
+
               {/* Certificates Section */}
               <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Certificates
                 </h4>
-                
+
                 <div className="space-y-4">
                   {certificates.map((cert) => (
                     <div key={cert.id} className="border-l-2 border-blue-600 pl-4">
@@ -128,13 +125,13 @@ const Education = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Volunteering Section */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
               Volunteering
             </h3>
-            
+
             <div className="space-y-8">
               {volunteering.map((vol) => (
                 <div key={vol.id} className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">

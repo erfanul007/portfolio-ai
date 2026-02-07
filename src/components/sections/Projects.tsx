@@ -39,21 +39,18 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
-          Projects
-        </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div 
-              key={project.id} 
+            <div
+              key={project.id}
               className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105 group"
             >
               {/* Project Image */}
               <div className="h-48 bg-gray-300 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-                <img 
-                  src={`${baseUrl}${project.image}`} 
-                  alt={`${project.title} logo`} 
+                <img
+                  src={`${baseUrl}${project.image}`}
+                  alt={`${project.title} logo`}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Fallback if image fails to load
@@ -74,7 +71,7 @@ const Projects = () => {
                   }}
                 />
               </div>
-              
+
               {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">
@@ -83,7 +80,7 @@ const Projects = () => {
                 <p className="text-sm text-blue-600 dark:text-blue-400 mb-2">
                   {project.subtitle}
                 </p>
-                
+
                 {/* Description with truncation and hover effect */}
                 <div className="relative mb-4">
                   <p className="text-gray-700 dark:text-gray-300 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
@@ -93,13 +90,13 @@ const Projects = () => {
                     <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-gray-50 dark:from-gray-800 to-transparent group-hover:opacity-0 transition-opacity duration-300"></div>
                   )}
                 </div>
-                
+
                 {/* Technologies with improved display */}
                 <div className="relative mb-4">
                   <div className="flex flex-wrap gap-2 overflow-hidden transition-all duration-300" style={{ maxHeight: '28px' }}>
                     {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span 
-                        key={index} 
+                      <span
+                        key={index}
                         className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
                       >
                         {tech}
@@ -111,12 +108,12 @@ const Projects = () => {
                       </span>
                     )}
                   </div>
-                  
+
                   {/* Additional technologies that show on project hover */}
                   <div className="flex flex-wrap gap-2 mt-2 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden">
                     {project.technologies.slice(3).map((tech, index) => (
-                      <span 
-                        key={index} 
+                      <span
+                        key={index}
                         className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
                       >
                         {tech}
@@ -124,12 +121,12 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Links */}
                 <div className="flex space-x-4">
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
+                  <a
+                    href={project.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 dark:text-blue-400 hover:underline flex items-center"
                   >
@@ -139,9 +136,9 @@ const Projects = () => {
                     </svg>
                     Demo
                   </a>
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
+                  <a
+                    href={project.github}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white flex items-center"
                   >

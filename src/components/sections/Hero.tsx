@@ -12,10 +12,11 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const titles = [
-    'Software Engineer',
+    'Senior Software Engineer',
     '.NET Developer',
     'Competitive Programmer',
-    'AI Enthusiast'
+    'Senior Backend Developer',
+    'AI Solution Expert'
   ];
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const Hero = () => {
       // If completed typing the word
       if (!isDeleting && displayText === fullText) {
         setTimeout(() => setIsDeleting(true), 1500); // Wait before starting to delete
-      } 
+      }
       // If deleted the word
       else if (isDeleting && displayText === '') {
         setIsDeleting(false);
@@ -65,29 +66,34 @@ const Hero = () => {
               <span className="cursor-blink">|</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-              Experienced .NET Developer with 3+ years of expertise in creating scalable applications using .NET 8, C#, Azure, and AWS. Focused on developing AI-powered solutions to enhance performance, security, and efficiency.
+              Software Engineer with 4 years of experience building enterprise solutions. Strong competitive programming background in algorithms and data structures, applied to designing and optimizing high-performance distributed systems and AI-powered applications.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button 
+              <button
                 onClick={() => navigateToSection('contact')}
                 className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
                 Contact Me
               </button>
-              <button 
-                onClick={() => navigateToSection('projects')}
-                className="px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors"
+              <a
+                href="https://app.flowcv.com/api/public/download_resume?token=jpiu4g5d0v"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2"
               >
-                View Projects
-              </button>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Resume
+              </a>
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl border-4 border-white dark:border-gray-800">
               {/* Erfan's profile image with fallback */}
-              <img 
-                src={`${baseUrl}profile-erfan.jpg`} 
-                alt="Md Erfanul Islam Bhuiyan" 
+              <img
+                src={`${baseUrl}profile-erfan.jpg`}
+                alt="Md Erfanul Islam Bhuiyan"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   // If image fails to load, show a fallback
